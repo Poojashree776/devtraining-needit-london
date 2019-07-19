@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element label="Related changes" max_length="32" name="change_table" reference="change_request" type="reference"/>
+        <element label="Last name" max_length="40" name="last_name" type="string"/>
+        <element label="Problem" max_length="32" name="problem" reference="problem" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Resolution Code" max_length="40" name="resolved_by" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Solved(work around)" sequence="0" value="solved(work around)"/>
+                <element inactive_on_update="false" label="Solved(permanently)" sequence="1" value="solved(permanently)"/>
+                <element inactive_on_update="false" label="Not Solved(Too costly)" sequence="2" value="not solved(too costly)"/>
+                <element inactive_on_update="false" label="Closed/Resolved(By caller)" sequence="3" value="closed/resolved(by caller)"/>
+            </choice>
+        </element>
+    </element>
+</database>
